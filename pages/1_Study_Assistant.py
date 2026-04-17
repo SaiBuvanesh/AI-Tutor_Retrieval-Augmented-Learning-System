@@ -142,7 +142,8 @@ def summary():
     docs = st.file_uploader(
         "Upload PDF or DOCX Files",
         accept_multiple_files=True,
-        type=["pdf", "docx"]
+        type=["pdf", "docx"],
+        help="Upload one or more PDF or DOCX documents to use for study and question answering."
     )
 
     if st.button("Process Documents") and docs:
@@ -169,7 +170,11 @@ def summary():
             )
 
     if st.session_state.success:
-        user_query = st.text_area("What would you like to know?", placeholder="Type your question here...")
+        user_query = st.text_area(
+            "What would you like to know?",
+            placeholder="Type your question here...",
+            help="Enter your question or specific topic you want to learn about from the uploaded documents."
+        )
         
         col1, col2 = st.columns(2)
         

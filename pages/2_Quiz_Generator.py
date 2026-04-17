@@ -150,6 +150,7 @@ def main():
             "Upload PDF or DOCX Files",
             type=["pdf", "docx"],
             accept_multiple_files=True,
+            help="Select documents to generate quiz questions from."
         )
 
         if files and st.button("Process Documents"):
@@ -178,7 +179,8 @@ def main():
         with st.expander("Step 2: Create Quiz", expanded=True):
             topic = st.text_input(
                 "Enter a topic from the documents:",
-                placeholder="e.g., Machine Learning, History, Biology"
+                placeholder="e.g., Machine Learning, History, Biology",
+                help="Enter the specific topic you want to be tested on (e.g., 'Machine Learning')."
             )
 
             if topic and st.button("Create Quiz"):

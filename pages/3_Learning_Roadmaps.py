@@ -99,7 +99,8 @@ def main():
     with col1:
         domain = st.text_input(
             "Enter your domain of interest:",
-            placeholder="e.g., Data Science, Cybersecurity, Digital Marketing"
+            placeholder="e.g., Data Science, Cybersecurity, Digital Marketing",
+            help="Enter a technical domain or career path you want a roadmap for (e.g., 'Data Science')."
         )
 
     with col2:
