@@ -21,7 +21,7 @@ load_dotenv()
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 if not GROQ_API_KEY:
-    st.error("❌ GROQ_API_KEY not found. Please set it in environment variables.")
+    st.error("GROQ_API_KEY not found. Please set it in environment variables.")
     st.stop()
 
 # Session State Initialization
@@ -96,7 +96,7 @@ Topic:
         )
         return response
     except Exception as e:
-        st.error(f"❌ Failed to generate quiz: {str(e)}")
+        st.error(f"Failed to generate quiz: {str(e)}")
         return None
 
 # Quiz Display & Evaluation

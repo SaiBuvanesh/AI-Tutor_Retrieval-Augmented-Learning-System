@@ -3,7 +3,7 @@ import streamlit as st
 # -------------------- Page Config --------------------
 st.set_page_config(
     page_title="AI Tutor – A RAG Based Document QA System",
-    page_icon="🎓",
+    page_icon=None,
     layout="wide"
 )
 

@@ -1,10 +1,10 @@
-# AI Tutor: Your Intelligent Learning Companion 🎓
+# AI Tutor: Your Intelligent Learning Companion
 
 AI Tutor is a sophisticated RAG (Retrieval-Augmented Generation) application designed to transform how you interact with educational content. By leveraging the power of **Llama 3 (via Groq)**, **FAISS**, and **Hugging Face Embeddings**, it provides a seamless interface for deep document understanding, automated quiz generation, and structured learning paths.
 
 ![Project Demo](Demo.webm)
 
-## 🚀 Core Features
+## Core Features
 
 ### 1. Smart Study Assistant
 Navigate through complex documents with ease.
@@ -24,7 +24,7 @@ Define your growth trajectory in the tech world.
 
 ---
 
-## 🛠️ Technical Stack & Comparison
+## Technical Stack & Comparison
 
 | Component | Technology | Rationale |
 | :--- | :--- | :--- |
@@ -36,7 +36,7 @@ Define your growth trajectory in the tech world.
 
 ---
 
-## 📋 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Python 3.10 or higher
@@ -69,7 +69,7 @@ Define your growth trajectory in the tech world.
 
 ---
 
-## 🏛️ Project Structure
+## Project Structure
 
 ```
 AI-Tutor/

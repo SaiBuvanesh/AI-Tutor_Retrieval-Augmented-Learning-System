@@ -16,7 +16,7 @@ load_dotenv()
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 if not GROQ_API_KEY:
-    st.error("❌ GROQ_API_KEY not found. Please set it in environment variables.")
+    st.error("GROQ_API_KEY not found. Please set it in environment variables.")
     st.stop()
 
 # Initialize LLM
@@ -35,33 +35,33 @@ from absolute basics to advanced expert level.
 
 Format the roadmap with:
 
-# 🚀 [Domain] Learning Roadmap
+# [Domain] Learning Roadmap
 
-## 📚 Foundation Level
-🔹 **Topic 1**:
+## Foundation Level
+- **Topic 1**:
    - Key concepts
    - Practical applications
    - Resources (books/courses/links)
 
-🔹 **Topic 2**:
+- **Topic 2**:
    - Key concepts
    - Practical applications
    - Resources (books/courses/links)
 
-## 🏗️ Intermediate Level
-🔸 **Topic 1**:
+## Intermediate Level
+- **Topic 1**:
    - Key concepts
    - Practical applications
    - Resources (books/courses/links)
 
-## 🎯 Advanced Level
-🔺 **Topic 1**:
+## Advanced Level
+- **Topic 1**:
    - Key concepts
    - Practical applications
    - Resources (books/courses/links)
 
-## 🏫 Expert Level
-🌟 **Topic 1**:
+## Expert Level
+- **Topic 1**:
    - Key concepts
    - Practical applications
    - Resources (books/courses/links)
@@ -111,10 +111,10 @@ def main():
 
     if generate_btn:
         if not domain:
-            st.warning("⚠️ Please enter a domain or topic of interest.")
+            st.warning("Please enter a domain or topic of interest.")
             return
 
-        with st.spinner(f"🚀 Generating {domain} roadmap..."):
+        with st.spinner(f"Generating {domain} roadmap..."):
             try:
                 roadmap = generate_roadmap(domain)
 
@@ -125,7 +125,7 @@ def main():
                     st.markdown(roadmap)
 
                 st.download_button(
-                    label="📥 Download Markdown",
+                    label="Download Markdown",
                     data=roadmap,
                     file_name=f"{domain.lower().replace(' ', '_')}_roadmap.md",
                     mime="text/markdown"
@@ -138,7 +138,7 @@ def main():
                 )
 
             except Exception as e:
-                st.error(f"❌ An error occurred: {str(e)}")
+                st.error(f"An error occurred: {str(e)}")
 
 # Run app
 

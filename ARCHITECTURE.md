@@ -2,7 +2,7 @@
 
 This document provides a technical deep dive into the architecture of AI Tutor, detailing the data flow, component interactions, and the RAG pipeline design.
 
-## 📐 High-Level Architecture
+## High-Level Architecture
 
 AI Tutor follows a **modular, component-based architecture** where the frontend (Streamlit) interacts with an orchestration layer (LangChain) to process data and generate AI-driven insights.
 
@@ -28,7 +28,7 @@ graph TD
 > [!IMPORTANT]
 > **Data Privacy**: All document processing and vectorization happen locally in-memory. Only the relevant context chunks and the user query are sent to the Groq API for generation.
 
-## 🧩 Core Architectural Pillars
+## Core Architectural Pillars
 
 ### 1. The RAG Pipeline (Retrieval-Augmented Generation)
 Our RAG implementation focuses on **contextual fidelity**. Instead of relying on a broad knowledge base, the system strictly grounds its answers in the provided documents.
@@ -45,7 +45,7 @@ The extraction pipeline supports multi-format ingestion (PDF, DOCX).
 - **Extraction**: Uses `PyPDF2` and `python-docx` for robust text recovery.
 - **Chunking Strategy**: Employs `RecursiveCharacterTextSplitter` with an overlap of 200 characters to maintain semantic continuity across chunk boundaries.
 
-## ⛓️ Workflow Detail
+## Workflow Detail
 
 ### Quiz Generation Workflow
 1. **Context Extraction**: Retrieves the most relevant segments based on a chosen topic.
@@ -58,7 +58,7 @@ The extraction pipeline supports multi-format ingestion (PDF, DOCX).
 
 ---
 
-## 🔄 Detailed Process Flow: Quiz Generation
+## Detailed Process Flow: Quiz Generation
 
 The Quiz Generator utilizes a deterministic logic loop wrapped around LLM-driven content synthesis.
 
@@ -87,7 +87,7 @@ sequenceDiagram
 
 ---
 
-## 🛠️ Design Rationale
+## Design Rationale
 
 - **Why FAISS?** It offers industry-leading speed for similarity search and is lightweight enough to run in-memory without a complex database setup.
 - **Why Groq?** Groq's LPUs provide exceptionally low latency for Llama 3 models, making the interactive parts of the app (Chat, Quizzes) feel instantaneous.
